@@ -1,0 +1,58 @@
+ext {
+    kotlin_version = "1.4.32"
+    room_version = "2.3.0"
+    hiltVersion = "2.38.1"
+    pagingVersion = "3.0.0"
+    mockito_version = "3.9.0"
+    coroutines_version = '1.5.2'
+    libraries = [
+            kotlin  : [
+                    stdlib           : "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version",
+                    kotlinxCoroutines: 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3',
+                    coroutinesTest   : "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
+            ],
+            androidx: [
+                    appcompat       : 'androidx.appcompat:appcompat:1.3.1',
+                    coreKtx         : 'androidx.core:core-ktx:1.6.0',
+                    constraintlayout: 'androidx.constraintlayout:constraintlayout:2.1.1',
+                    navigationKtx   : 'androidx.navigation:navigation-fragment-ktx:2.3.5',
+                    navigationUiKtx : 'androidx.navigation:navigation-ui-ktx:2.3.5',
+                    navigation      : 'androidx.navigation:navigation-fragment-ktx:2.3.5',
+                    lifecycle       : 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1',
+                    lifecycleKtx    : 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1',
+                    roomRuntime     : "androidx.room:room-runtime:$room_version",
+                    roomCompiler    : "androidx.room:room-compiler:$room_version",
+                    roomKtx         : "androidx.room:room-ktx:$room_version",
+                    paging          : "androidx.paging:paging-runtime-ktx:$pagingVersion",
+                    junit           : 'androidx.test.ext:junit:1.1.3',
+                    espresso        : 'androidx.test.espresso:espresso-core:3.4.0',
+            ],
+            material: [
+                    material: 'com.google.android.material:material:1.4.0'
+            ],
+            squareup: [
+                    retrofit2: 'com.squareup.retrofit2:retrofit:2.9.0',
+                    okhttp3  : 'com.squareup.okhttp3:logging-interceptor:4.9.1',
+                    converter: 'com.squareup.retrofit2:converter-gson:2.8.1'
+            ],
+            dagger  : [
+                    androidCompiler: "com.google.dagger:hilt-android-compiler:$hiltVersion",
+                    hiltAndroid    : "com.google.dagger:hilt-android:$hiltVersion",
+                    hiltTesting    : "com.google.dagger:hilt-android-testing:$hiltVersion"
+            ],
+            coil    : [
+                    coil: 'io.coil-kt:coil:1.2.0'
+            ],
+            junit   : [
+                    junit: 'junit:junit:4.12'
+            ],
+            mockito : [
+                    mockitoCore   : "org.mockito:mockito-core:$mockito_version",
+                    mockitoInline : "org.mockito:mockito-inline:$mockito_version",
+                    hamcrest      : 'org.hamcrest:hamcrest-library:1.3',
+                    mockitoKotlin2: 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0',
+                    mockitoAndroid: 'org.mockito:mockito-android:2.23.0'
+            ]
+
+    ]
+}

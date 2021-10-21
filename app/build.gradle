@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.userapp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+    implementation libraries.kotlin.stdlib
+    implementation libraries.androidx.coreKtx
+    implementation libraries.androidx.appcompat
+    implementation libraries.material.material
+    implementation libraries.androidx.constraintlayout
+    implementation libraries.androidx.navigationKtx
+    implementation libraries.androidx.navigationUiKtx
+    implementation libraries.androidx.lifecycle
+    implementation libraries.androidx.lifecycleKtx
+    implementation libraries.androidx.navigation
+    implementation libraries.kotlin.kotlinxCoroutines
+    implementation libraries.squareup.retrofit2
+    implementation libraries.squareup.okhttp3
+    implementation libraries.squareup.converter
+    implementation libraries.androidx.roomRuntime
+    implementation libraries.androidx.roomKtx
+    implementation libraries.dagger.hiltAndroid
+    implementation libraries.androidx.paging
+    implementation libraries.coil.coil
+
+    kapt libraries.dagger.androidCompiler
+    kapt libraries.androidx.roomCompiler
+    kaptAndroidTest libraries.dagger.androidCompiler
+
+    testImplementation libraries.androidx.junit
+    testImplementation libraries.junit.junit
+
+    testImplementation libraries.mockito.mockitoCore
+    testImplementation libraries.mockito.mockitoInline
+    testImplementation libraries.mockito.hamcrest
+    testImplementation libraries.mockito.mockitoKotlin2
+    testImplementation libraries.mockito.mockitoAndroid
+    testImplementation libraries.kotlin.coroutinesTest
+
+    androidTestImplementation libraries.dagger.hiltTesting
+    androidTestImplementation libraries.androidx.junit
+    androidTestImplementation libraries.androidx.espresso
+
+}
