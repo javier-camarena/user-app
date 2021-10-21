@@ -13,7 +13,7 @@ ext {
             ],
             androidx: [
                     appcompat       : 'androidx.appcompat:appcompat:1.3.1',
-                    coreKtx         : 'androidx.core:core-ktx:1.6.0',
+                    coreKtx         : 'androidx.core:core-ktx:1.5.0',
                     constraintlayout: 'androidx.constraintlayout:constraintlayout:2.1.1',
                     navigationKtx   : 'androidx.navigation:navigation-fragment-ktx:2.3.5',
                     navigationUiKtx : 'androidx.navigation:navigation-ui-ktx:2.3.5',
