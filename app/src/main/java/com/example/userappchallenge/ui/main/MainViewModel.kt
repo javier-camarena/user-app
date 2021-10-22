@@ -1,49 +1,41 @@
 package com.example.userappchallenge.ui.main
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.userappchallenge.data.UserRepository
+import com.example.userappchallenge.domain.FetchUserInfoUseCase
+import com.example.userappchallenge.entities.User
+import com.example.userappchallenge.presentation.MainViewViewState
+import com.example.userappchallenge.presentation.UserViewData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 @HiltViewModel
-class MainViewModel @Inject constructor() : ViewModel() {
+class MainViewModel @Inject constructor(
+    private val fetchUserInfoUseCase: FetchUserInfoUseCase
+) : ViewModel() {
     private val disposable: CompositeDisposable = CompositeDisposable()
-    private lateinit var requestInterface: UserRepository
-
-    init {
-        createClient()
-    }
+    private val state = MutableLiveData<MainViewViewState>()
 
     fun fetchUser() {
+        state.postValue(MainViewViewState.LoadingData)
         disposable.add(
-            requestInterface.fetchUser()
+            fetchUserInfoUseCase.invoke()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .subscribe({
-                    println(it)
+                    state.postValue(MainViewViewState.DataReadyToShow(listOf(it.toViewData())))
                 }, {
                     it.printStackTrace()
                 })
         )
     }
 
-    fun createClient() {
+    private fun User.toViewData(): UserViewData =
+        UserViewData(
+            fullName = "$firstName $lastName",
+            nationality = nationality
+        )
 
-
-//Build a Retrofit object//
-
-        requestInterface = Retrofit.Builder()
-            .baseUrl("https://randomuser.me/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .build().create(UserRepository::class.java)
-
-//Get a usable Retrofit object by calling .build()//
-
-    }
 }

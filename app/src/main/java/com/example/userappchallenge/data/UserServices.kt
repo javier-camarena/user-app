@@ -4,7 +4,7 @@ import com.example.userappchallenge.data.response.UserResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 
-interface UserRepository {
+interface UserServices {
     @GET("/api/")
     fun fetchUser(): Single<UserResponse>
 }

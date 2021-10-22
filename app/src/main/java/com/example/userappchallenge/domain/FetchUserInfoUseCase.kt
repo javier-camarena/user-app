@@ -1,4 +1,14 @@
 package com.example.userappchallenge.domain
 
-class FetchUserInfoUseCase {
+import com.example.userappchallenge.data.api.datasources.UserRepository
+import com.example.userappchallenge.entities.User
+import io.reactivex.Single
+import javax.inject.Inject
+
+class FetchUserInfoUseCase @Inject constructor(
+    private val userRepository: UserRepository
+) {
+    operator fun invoke(): Single<User> =
+        userRepository
+            .fetchUser()
 }
