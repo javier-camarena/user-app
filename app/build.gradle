@@ -51,14 +51,12 @@ dependencies {
     implementation libraries.androidx.lifecycle
     implementation libraries.androidx.lifecycleKtx
     implementation libraries.androidx.navigation
-    implementation libraries.kotlin.kotlinxCoroutines
     implementation libraries.squareup.retrofit2
     implementation libraries.squareup.okhttp3
     implementation libraries.squareup.converter
     implementation libraries.androidx.roomRuntime
     implementation libraries.androidx.roomKtx
     implementation libraries.dagger.hiltAndroid
-    implementation libraries.androidx.paging
     implementation libraries.coil.coil
 
     kapt libraries.dagger.androidCompiler
@@ -73,7 +71,6 @@ dependencies {
     testImplementation libraries.mockito.hamcrest
     testImplementation libraries.mockito.mockitoKotlin2
     testImplementation libraries.mockito.mockitoAndroid
-    testImplementation libraries.kotlin.coroutinesTest
 
     androidTestImplementation libraries.dagger.hiltTesting
     androidTestImplementation libraries.androidx.junit
