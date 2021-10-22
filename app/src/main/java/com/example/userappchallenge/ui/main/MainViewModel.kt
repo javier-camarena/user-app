@@ -35,7 +35,12 @@ class MainViewModel @Inject constructor(
     private fun User.toViewData(): UserViewData =
         UserViewData(
             fullName = "$firstName $lastName",
-            nationality = nationality
+            nationality = nationality,
+            profilePic = profilePic
         )
 
+    override fun onCleared() {
+        super.onCleared()
+        disposable.dispose()
+    }
 }

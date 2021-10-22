@@ -22,7 +22,7 @@ class UserApi @Inject constructor(
                     firstName = name.first,
                     lastName = name.last,
                     nationality = nat,
-                    profilePic = picture.medium,
+                    profilePic = picture.large,
                     contactPhone = phone
                 )
             }

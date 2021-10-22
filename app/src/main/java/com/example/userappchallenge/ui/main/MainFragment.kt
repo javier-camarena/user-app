@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.userappchallenge.databinding.MainFragmentBinding
+import com.example.userappchallenge.presentation.MainAdapter
 import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToShow
 import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +23,9 @@ class MainFragment : Fragment() {
 
     private lateinit var binding: MainFragmentBinding
     private val viewModel: MainViewModel by viewModels()
+    private val adapter: MainAdapter by lazy {
+        MainAdapter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,22 +39,27 @@ class MainFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        if(savedInstanceState == null){
+        if (savedInstanceState == null) {
             viewModel.fetchUser()
         }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setUpView()
         viewModel.state.observe(viewLifecycleOwner) { viewState ->
             when (viewState) {
                 is DataReadyToShow -> {
                     showLoader(false)
-
+                    adapter.updateUserData(viewState.viewData)
                 }
                 is LoadingData -> showLoader(true)
             }
         }
+    }
+
+    private fun setUpView() {
+        binding.userListRecyclerView.adapter = adapter
     }
 
     private fun showLoader(isVisible: Boolean) {

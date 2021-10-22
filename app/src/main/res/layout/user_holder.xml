@@ -4,32 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    app:layout_constraintVertical_chainStyle="packed">
 
     <ImageView
         android:id="@+id/userProfileImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/userNameTextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars"
-        />
+        tools:src="@tools:sample/avatars" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/userNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/userNationalityTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/userProfileImageView"
         app:layout_constraintTop_toTopOf="@id/userProfileImageView"
-        tools:text="User Name"
-        />
+        tools:text="User Name" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/userNationalityTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/userProfileImageView"
         app:layout_constraintTop_toBottomOf="@id/userNameTextView"
-        tools:text="ES"
-        />
+        tools:text="ES" />
 </androidx.constraintlayout.widget.ConstraintLayout>
