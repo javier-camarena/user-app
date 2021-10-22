@@ -16,7 +16,7 @@ class MainViewModel @Inject constructor(
     private val fetchUserInfoUseCase: FetchUserInfoUseCase
 ) : ViewModel() {
     private val disposable: CompositeDisposable = CompositeDisposable()
-    private val state = MutableLiveData<MainViewViewState>()
+    val state = MutableLiveData<MainViewViewState>()
 
     fun fetchUser() {
         state.postValue(MainViewViewState.LoadingData)

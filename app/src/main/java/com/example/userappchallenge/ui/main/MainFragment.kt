@@ -3,10 +3,14 @@ package com.example.userappchallenge.ui.main
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.userappchallenge.databinding.MainFragmentBinding
+import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToShow
+import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -29,8 +33,29 @@ class MainFragment : Fragment() {
         binding.root
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if(savedInstanceState == null){
+            viewModel.fetchUser()
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.fetchUser()
+        viewModel.state.observe(viewLifecycleOwner) { viewState ->
+            when (viewState) {
+                is DataReadyToShow -> {
+                    showLoader(false)
+
+                }
+                is LoadingData -> showLoader(true)
+            }
+        }
+    }
+
+    private fun showLoader(isVisible: Boolean) {
+        binding.progress.apply {
+            visibility = if (isVisible) VISIBLE else GONE
+        }
     }
 }
