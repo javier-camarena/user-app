@@ -33,7 +33,8 @@ ext {
             squareup: [
                     retrofit2: 'com.squareup.retrofit2:retrofit:2.9.0',
                     okhttp3  : 'com.squareup.okhttp3:logging-interceptor:4.9.1',
-                    converter: 'com.squareup.retrofit2:converter-gson:2.8.1'
+                    converter: 'com.squareup.retrofit2:converter-gson:2.8.1',
+                    adapter  : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
             ],
             dagger  : [
                     androidCompiler: "com.google.dagger:hilt-android-compiler:$hiltVersion",
