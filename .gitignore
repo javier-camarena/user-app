@@ -10,7 +10,10 @@
 .idea/*
 .DS_Store
 /build
+/gradle/
 /captures
 .externalNativeBuild
 .cxx
 local.properties
+gradle.properties
+projectFilesBackup/*
