@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintVertical_chainStyle="packed">
+    android:layout_margin="@dimen/margin_16">
 
-    <ImageView
-        android:id="@+id/userProfileImageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/userNameTextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/userNameTextView"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toTopOf="@id/userNationalityTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toTopOf="@id/userProfileImageView"
-        tools:text="User Name" />
+        app:layout_constraintVertical_chainStyle="packed">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/userNationalityTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
-        tools:text="ES" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="@dimen/default_image_size"
+            android:layout_height="@dimen/default_image_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/userNameTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userNameLabel"
+            style="@style/title_text"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/user_name_label"
+            app:layout_constraintBottom_toTopOf="@id/userNationalityTextView"
+            app:layout_constraintRight_toLeftOf="@id/userNameTextView"
+            app:layout_constraintStart_toEndOf="@id/userProfileImageView"
+            app:layout_constraintTop_toTopOf="@id/userProfileImageView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userNameTextView"
+            style="@style/default_text"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="@id/userNameLabel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userNameLabel"
+            app:layout_constraintTop_toTopOf="@id/userNameLabel"
+            tools:text="@tools:sample/first_names" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userNationalityLabel"
+            style="@style/title_text"
+            android:layout_margin="@dimen/margin_16"
+            android:text="@string/nationality_label"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userProfileImageView"
+            app:layout_constraintTop_toBottomOf="@id/userNameLabel" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userNationalityTextView"
+            style="@style/default_text"
+            android:layout_marginStart="@dimen/margin_16"
+            app:layout_constraintBottom_toBottomOf="@id/userNationalityLabel"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userNationalityLabel"
+            app:layout_constraintTop_toTopOf="@id/userNationalityLabel"
+            tools:text="ES" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

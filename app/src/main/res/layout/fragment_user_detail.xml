@@ -20,50 +20,78 @@
 
     <ImageView
         android:id="@+id/userProfileImageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/userNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
         tools:src="@tools:sample/avatars" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/userNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toTopOf="@id/userNationalityTextView"
+        style="@style/default_text"
+        android:layout_margin="@dimen/margin_16"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toBottomOf="@id/userNickNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userProfileImageView"
         tools:text="@tools:sample/first_names" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userNationalityLabel"
+        style="@style/title_text"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/user_nationality_label"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/contactPhoneLabel"
+        app:layout_constraintTop_toBottomOf="@id/contactPhoneLabel" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/userNationalityTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+        style="@style/default_text"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="@id/userNationalityLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userNationalityLabel"
+        app:layout_constraintTop_toTopOf="@id/userNationalityLabel"
         tools:text="ES" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/contactPhoneLabel"
+        style="@style/title_text"
+        android:layout_marginTop="@dimen/margin_16"
+        android:text="@string/contact_phone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userNickNameLabel"
+        app:layout_constraintTop_toBottomOf="@id/userNickNameLabel" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/contactPhoneTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toBottomOf="@id/userNationalityTextView"
+        style="@style/default_text"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="@id/contactPhoneLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/contactPhoneLabel"
+        app:layout_constraintTop_toTopOf="@id/contactPhoneLabel"
         tools:text="@tools:sample/us_phones" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/userNickNameLabel"
+        style="@style/title_text"
+        android:layout_margin="@dimen/margin_16"
+        android:text="@string/nickname_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/userNickNameTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userProfileImageView"
-        app:layout_constraintTop_toTopOf="parent"
+        style="@style/default_text"
+        android:layout_marginStart="@dimen/margin_16"
+        app:layout_constraintBottom_toBottomOf="@id/userNickNameLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@id/userNickNameLabel"
+        app:layout_constraintTop_toTopOf="@id/userNickNameLabel"
         tools:text="@tools:sample/first_names" />
 </androidx.constraintlayout.widget.ConstraintLayout>

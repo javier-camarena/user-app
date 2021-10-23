@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">User app challenge</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user_name_label">User Name:</string>
+    <string name="nationality_label">Nationality :</string>
+    <string name="nickname_label">NickName :</string>
+    <string name="contact_phone">Contact phone :</string>
+    <string name="user_nationality_label">User Nationality :</string>
 </resources>
