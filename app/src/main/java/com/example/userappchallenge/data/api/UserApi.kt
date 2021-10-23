@@ -8,6 +8,11 @@ import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
+/**
+ * serves as single source of data
+ * @param persistence implementation of [UserPersistence]
+ * @param services implementation of [UserServices] can be replaced with any api
+ */
 class UserApi @Inject constructor(
     private val persistence: UserPersistence,
     private val services: UserServices

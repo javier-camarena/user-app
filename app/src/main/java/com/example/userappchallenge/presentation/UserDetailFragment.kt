@@ -11,7 +11,10 @@ import com.example.userappchallenge.databinding.FragmentUserDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.security.InvalidParameterException
 
-
+/**
+ * Secondary view that retrieves user info from repository
+ * and show detailed data of the [User]
+ */
 @AndroidEntryPoint
 class UserDetailFragment : Fragment() {
     private lateinit var binding: FragmentUserDetailBinding

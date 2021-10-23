@@ -16,6 +16,11 @@ import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToSh
 import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * main view of the application
+ * when starts it calls [FetchMultipleUsersUseCase]
+ * to generate a list of users and sends it to [MainAdapter] to render
+ */
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 

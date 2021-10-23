@@ -3,6 +3,9 @@ package com.example.userappchallenge.data.database
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * entity to be used for room to store data to the table
+ */
 @Entity(tableName = "user")
 data class UserEntity(
     @PrimaryKey
