@@ -18,7 +18,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.UserViewHolder>() {
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            ), listener = itemListener
+            )
         )
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
@@ -34,8 +34,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.UserViewHolder>() {
     }
 
     inner class UserViewHolder(
-        private val binding: UserHolderBinding,
-        private val listener: ItemListener? = null
+        private val binding: UserHolderBinding
     ) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: UserViewData) {

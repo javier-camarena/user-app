@@ -3,6 +3,7 @@ package com.example.userappchallenge.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.userappchallenge.domain.FetchUserInfoUseCase
+import com.example.userappchallenge.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -23,10 +24,25 @@ class UserDetailViewModel @Inject constructor(
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .subscribe({
-                    it.lastName
+                    state.postValue(
+                        UserDetailViewState.Ready(
+                            it.toDetailViewData()
+                        )
+                    )
                 }, {
                     it.printStackTrace()
                 })
         )
     }
+
+    private fun User.toDetailViewData() = UserDetailViewData(
+        UserViewData(
+            id = id,
+            fullName = "$firstName $lastName",
+            nationality = nationality,
+            profilePic = profilePic
+        ),
+        nickName = nickName,
+        phone = contactPhone
+    )
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import coil.load
 import com.example.userappchallenge.databinding.FragmentUserDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 import java.security.InvalidParameterException
@@ -33,5 +34,33 @@ class UserDetailFragment : Fragment() {
     ) {
         binding = this
         binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.state.observe(viewLifecycleOwner) { viewState ->
+            when (viewState) {
+                UserDetailViewState.Loading -> showLoader(isVisible = true)
+                is UserDetailViewState.Ready -> {
+                    showData(viewState.viewData)
+                }
+            }
+        }
+    }
+
+    private fun showData(viewData: UserDetailViewData) {
+        binding.apply {
+            userNameTextView.text = viewData.user.fullName
+            userNationalityTextView.text = viewData.user.nationality
+            userProfileImageView.load(viewData.user.profilePic)
+            contactPhoneTextView.text = viewData.phone
+            userNickNameTextView.text = viewData.nickName
+        }
+    }
+
+    private fun showLoader(isVisible: Boolean) {
+        binding.progress.apply {
+            visibility = if (isVisible) View.VISIBLE else View.GONE
+        }
     }
 }
