@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mrs",
+        "first": "Emma",
+        "last": "Lo"
+      },
+      "location": {
+        "street": {
+          "number": 4483,
+          "name": "Stanley Way"
+        },
+        "city": "Selkirk",
+        "state": "Saskatchewan",
+        "country": "Canada",
+        "postcode": "E7L 2G4",
+        "coordinates": {
+          "latitude": "-64.7729",
+          "longitude": "136.1763"
+        },
+        "timezone": {
+          "offset": "+5:30",
+          "description": "Bombay, Calcutta, Madras, New Delhi"
+        }
+      },
+      "email": "emma.lo@example.com",
+      "login": {
+        "uuid": "697b7ebe-1fe2-40bb-ba85-f6f90246d1b1",
+        "username": "greenzebra473",
+        "password": "kirsty",
+        "salt": "96jcUTSO",
+        "md5": "e9f5c750c71e6636d72e243dca308e5b",
+        "sha1": "7cc4ce73931fcc46a1f855e001eb6f4c49c36eb8",
+        "sha256": "fcb459f1e8c8e95996823624f32319720c42cef3697de2ec36b687f74bc59989"
+      },
+      "dob": {
+        "date": "1997-01-23T11:09:59.683Z",
+        "age": 24
+      },
+      "registered": {
+        "date": "2012-07-20T07:16:44.952Z",
+        "age": 9
+      },
+      "phone": "124-817-0524",
+      "cell": "917-139-1675",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/5.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/5.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/5.jpg"
+      },
+      "nat": "CA"
+    }
+  ],
+  "info": {
+    "seed": "7da57563767ef4b6",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
+}
