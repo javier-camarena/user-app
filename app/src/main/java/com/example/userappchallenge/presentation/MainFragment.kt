@@ -6,9 +6,11 @@ import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.userappchallenge.MainActivity
+import androidx.navigation.Navigation
+import com.example.userappchallenge.R
 import com.example.userappchallenge.databinding.MainFragmentBinding
 import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToShow
 import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
@@ -16,10 +18,6 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = MainFragment()
-    }
 
     private lateinit var binding: MainFragmentBinding
     private val viewModel: MainViewModel by viewModels()
@@ -40,8 +38,9 @@ class MainFragment : Fragment() {
     }
 
     private fun onItemClicked(userId: String) {
-        val detailsFragment = UserDetailFragment.newInstance(userId)
-        (activity as? MainActivity)?.goToDetailsPage(detailsFragment)
+        val bundle = bundleOf("userId" to userId)
+        Navigation.findNavController(binding.root)
+            .navigate(R.id.action_mainFragment_to_userDetailFragment, bundle)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

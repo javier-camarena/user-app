@@ -13,14 +13,6 @@ import java.security.InvalidParameterException
 
 @AndroidEntryPoint
 class UserDetailFragment : Fragment() {
-    companion object {
-        fun newInstance(userId: String) = UserDetailFragment().apply {
-            arguments = Bundle().apply {
-                putString("userId", userId)
-            }
-        }
-    }
-
     private lateinit var binding: FragmentUserDetailBinding
     private val viewModel: UserDetailViewModel by viewModels()
 
