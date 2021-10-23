@@ -1,4 +1,4 @@
-package com.example.userappchallenge.ui.main
+package com.example.userappchallenge.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.userappchallenge.databinding.MainFragmentBinding
-import com.example.userappchallenge.presentation.MainAdapter
 import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToShow
 import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,11 +1,10 @@
-package com.example.userappchallenge.ui.main
+package com.example.userappchallenge.presentation
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.userappchallenge.domain.FetchMultipleUsersUseCase
+import com.example.userappchallenge.domain.FetchUserInfoUseCase
 import com.example.userappchallenge.entities.User
-import com.example.userappchallenge.presentation.MainViewViewState
-import com.example.userappchallenge.presentation.UserViewData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -13,7 +12,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val fetchMultipleUsersUseCase: FetchMultipleUsersUseCase
+    private val fetchMultipleUsersUseCase: FetchMultipleUsersUseCase,
+    private val fetchUserInfoUseCase: FetchUserInfoUseCase
 ) : ViewModel() {
     private val disposable: CompositeDisposable = CompositeDisposable()
     val state = MutableLiveData<MainViewViewState>()
@@ -24,10 +24,12 @@ class MainViewModel @Inject constructor(
             fetchMultipleUsersUseCase.invoke()
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
-                .subscribe({
+                .subscribe({ usersList ->
                     state.postValue(
                         MainViewViewState.DataReadyToShow(
-                            it.toViewData()
+                            usersList.map {
+                                it.toViewData()
+                            }
                         )
                     )
                 }, {

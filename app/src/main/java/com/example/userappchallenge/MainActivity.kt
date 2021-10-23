@@ -2,7 +2,7 @@ package com.example.userappchallenge
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.userappchallenge.ui.main.MainFragment
+import com.example.userappchallenge.presentation.MainFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
