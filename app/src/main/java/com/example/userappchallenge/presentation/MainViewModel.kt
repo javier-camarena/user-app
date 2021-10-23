@@ -38,6 +38,7 @@ class MainViewModel @Inject constructor(
 
     private fun User.toViewData(): UserViewData =
         UserViewData(
+            id = id,
             fullName = "$firstName $lastName",
             nationality = nationality,
             profilePic = profilePic

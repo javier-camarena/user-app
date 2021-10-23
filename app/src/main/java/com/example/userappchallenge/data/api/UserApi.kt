@@ -13,20 +13,19 @@ class UserApi @Inject constructor(
     private val services: UserServices
 ) : UserRepository {
     override fun fetchUser(id: String): Single<User> {
-        return persistence.getUserById(id)
-            .flatMap { user ->
-                if (user != null)
-                    Single.just(user)
-                else
-                    getUserFromService()
+        return persistence.getUsers().firstOrError().map {
+           userList ->
+            return@map userList.firstOrNull {
+                it.id == id
             }
+        }
     }
 
 
     override fun fetchUserList(): Observable<List<User>> {
         return persistence.getUsers().flatMap {
             if (it.isNotEmpty() && it.size < 5) {
-                return@flatMap getUserListFromService(it.size)
+                return@flatMap getUserListFromService(5 - it.size)
             } else {
                 Observable.just(it)
             }
@@ -34,7 +33,7 @@ class UserApi @Inject constructor(
     }
 
     private fun getUserListFromService(actualUserListSize: Int): Observable<List<User>> {
-        val users = Observable.range(0, 5)
+        val users = Observable.range(0, actualUserListSize)
             .flatMapSingle {
                 services.fetchUser()
             }.toList()
@@ -49,12 +48,6 @@ class UserApi @Inject constructor(
         )
     }
 
-    private fun getUserFromService(): Single<User> = services
-        .fetchUser()
-        .map {
-            persistence.saveUser(it.toUserEntity()).blockingAwait()
-            it.toUserEntity()
-        }
 
     private fun UserResponse.toUserEntity(): User {
         return this.results.firstOrNull()?.let {

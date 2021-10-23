@@ -23,7 +23,7 @@ class UserDetailViewModel @Inject constructor(
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .subscribe({
-
+                    it.lastName
                 }, {
                     it.printStackTrace()
                 })

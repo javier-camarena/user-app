@@ -8,6 +8,7 @@ import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.userappchallenge.MainActivity
 import com.example.userappchallenge.databinding.MainFragmentBinding
 import com.example.userappchallenge.presentation.MainViewViewState.DataReadyToShow
 import com.example.userappchallenge.presentation.MainViewViewState.LoadingData
@@ -23,7 +24,9 @@ class MainFragment : Fragment() {
     private lateinit var binding: MainFragmentBinding
     private val viewModel: MainViewModel by viewModels()
     private val adapter: MainAdapter by lazy {
-        MainAdapter()
+        MainAdapter().apply {
+            itemListener = ::onItemClicked
+        }
     }
 
     override fun onCreateView(
@@ -34,6 +37,11 @@ class MainFragment : Fragment() {
     ) {
         binding = this
         binding.root
+    }
+
+    private fun onItemClicked(userId: String) {
+        val detailsFragment = UserDetailFragment.newInstance(userId)
+        (activity as? MainActivity)?.goToDetailsPage(detailsFragment)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
