@@ -20,13 +20,16 @@ class FetchUserInfoUseCaseTest {
     @Mock
     lateinit var services: UserServices
 
+    @Mock
+    lateinit var persistence: UserPersistence
+
     lateinit var userRepository: UserRepository
 
     private lateinit var useCase: FetchUserInfoUseCase
 
     @Before
     fun setUp() {
-        userRepository = UserApi(services)
+        userRepository = UserApi(persistence, services)
         useCase = FetchUserInfoUseCase(userRepository)
     }
 

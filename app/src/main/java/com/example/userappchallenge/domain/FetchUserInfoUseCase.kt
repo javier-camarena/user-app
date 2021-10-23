@@ -8,7 +8,7 @@ import javax.inject.Inject
 class FetchUserInfoUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    operator fun invoke(): Single<User> =
+    operator fun invoke(id: String): Single<User> =
         userRepository
-            .fetchUser()
+            .fetchUser(id = id)
 }

@@ -3,6 +3,8 @@ package com.example.userappchallenge.data.api.datasources
 import com.example.userappchallenge.Utils
 import com.example.userappchallenge.data.UserServices
 import com.example.userappchallenge.data.api.UserApi
+import com.example.userappchallenge.domain.UserPersistence
+import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
 import org.junit.Assert
@@ -17,11 +19,16 @@ class UserApiTest {
 
     @Mock
     private lateinit var services: UserServices
+
+    @Mock
+    private lateinit var persistence: UserPersistence
+
     private lateinit var api: UserApi
 
     @Before
     fun setUp() {
-        api = UserApi(services)
+        whenever(persistence.getUserById(any())).thenReturn(null)
+        api = UserApi(persistence, services)
     }
 
     @Test

@@ -2,20 +2,61 @@ package com.example.userappchallenge.data.api
 
 import com.example.userappchallenge.data.UserServices
 import com.example.userappchallenge.data.response.UserResponse
+import com.example.userappchallenge.domain.UserPersistence
 import com.example.userappchallenge.entities.User
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
 class UserApi @Inject constructor(
+    private val persistence: UserPersistence,
     private val services: UserServices
 ) : UserRepository {
-    override fun fetchUser(): Single<User> = services
+    override fun fetchUser(id: String): Single<User> {
+        return persistence.getUserById(id)
+            .flatMap { user ->
+                if (user != null)
+                    Single.just(user)
+                else
+                    getUserFromService()
+            }
+    }
+
+
+    override fun fetchUserList(): Observable<List<User>> {
+        return persistence.getUsers().flatMap {
+            if (it.isNotEmpty() && it.size < 5) {
+                return@flatMap getUserListFromService(it.size)
+            } else {
+                Observable.just(it)
+            }
+        }
+    }
+
+    private fun getUserListFromService(actualUserListSize: Int): Observable<List<User>> {
+        val users = Observable.range(0, 5)
+            .flatMapSingle {
+                services.fetchUser()
+            }.toList()
+            .map { userListResponse ->
+                userListResponse.map {
+                    it.toUserEntity()
+                }
+            }.blockingGet()
+
+        return persistence.saveUserList(users).andThen(
+            persistence.getUsers()
+        )
+    }
+
+    private fun getUserFromService(): Single<User> = services
         .fetchUser()
         .map {
+            persistence.saveUser(it.toUserEntity()).blockingAwait()
             it.toUserEntity()
         }
 
-    private fun UserResponse.toUserEntity(): User? {
+    private fun UserResponse.toUserEntity(): User {
         return this.results.firstOrNull()?.let {
             with(it) {
                 User(
@@ -28,6 +69,8 @@ class UserApi @Inject constructor(
                     contactPhone = phone
                 )
             }
-        }
+        } ?: User(
+            "", "", "", "", "", "", ""
+        )
     }
 }

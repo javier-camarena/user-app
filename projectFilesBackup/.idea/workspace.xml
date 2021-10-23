@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ad8fc07-39f7-45dc-9dae-32e987fe153d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/UserDetailFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/UserDetailViewData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/UserDetailViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/UserDetailViewState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_user_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge/data/api/datasources/UserDaoTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/database/UserDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/database/UserDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/database/UserDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/database/UserDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/di/Module.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/di/Module.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/di/ModuleBinds.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/di/ModuleBinds.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/ui/main/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/MainFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/presentation/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge/data/api/datasources/UserApiTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge/data/api/datasources/UserApiTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge/domain/FetchUserInfoUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge/domain/FetchUserInfoUseCaseTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraries.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/libraries.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="JUnit4 Test Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1znYCNmjMpLlwmV539UuBLzPenz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com/example/userappchallenge" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UserApp" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.userappchallenge.data.api.datasources" />
+      <recent name="com.example.userappchallenge.domain" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.userappchallenge.presentation" />
+      <recent name="com.example.userappchallenge.data.api" />
+      <recent name="com.example.userappchallenge.di" />
+      <recent name="com.example.userappchallenge.data.response" />
+      <recent name="com.example.userappchallenge" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.userappchallenge.ui" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\null\AndroidStudioProjects\Userappchallenge" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
+    <configuration name="UserApiTest.user returned from repository is mapped correctly" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User_app_challenge.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.userappchallenge.data.api.datasources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.userappchallenge.data.api.datasources" />
+      <option name="MAIN_CLASS_NAME" value="com.example.userappchallenge.data.api.datasources.UserApiTest" />
+      <option name="METHOD_NAME" value="user returned from repository is mapped correctly" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User_app_challenge.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.userappchallenge.data.api.datasources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.userappchallenge.data.api.datasources" />
+      <option name="MAIN_CLASS_NAME" value="com.example.userappchallenge.data.api.datasources.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest.insertAndGetUserById" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User_app_challenge.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.userappchallenge.data.api.datasources.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.userappchallenge.data.api.datasources" />
+      <option name="MAIN_CLASS_NAME" value="com.example.userappchallenge.data.api.datasources.UserDaoTest" />
+      <option name="METHOD_NAME" value="insertAndGetUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="User_app_challenge.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FetchUserInfoUseCaseTest.fetching single user success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="User_app_challenge.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.userappchallenge.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.userappchallenge.domain" />
+      <option name="MAIN_CLASS_NAME" value="com.example.userappchallenge.domain.FetchUserInfoUseCaseTest" />
+      <option name="METHOD_NAME" value="fetching single user success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Android JUnit.UserDaoTest" />
+        <item itemvalue="Android JUnit.UserDaoTest.insertAndGetUserById" />
+        <item itemvalue="Android JUnit.UserApiTest.user returned from repository is mapped correctly" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ad8fc07-39f7-45dc-9dae-32e987fe153d" name="Default Changelist" comment="" />
+      <created>1634785190827</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634785190827</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="751" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1634962624686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="751" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1634962624686" />
+    <state x="660" y="401" width="607" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1634969937443">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="660" y="401" width="607" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1920.1040@0.0.1920.1040" timestamp="1634969937443" />
+    <state x="728" y="271" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1634943770151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="728" y="271" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634943770151" />
+    <state x="162" y="311" width="804" height="417" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1634969959698">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="162" y="311" width="804" height="417" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634969959698" />
+    <state x="1029" y="139" width="799" height="729" key="#xdebugger.evaluate" timestamp="1634967588557">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1029" y="139" width="799" height="729" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1634967588557" />
+    <state x="540" y="275" key="AndroidCreateResourceDirectoryDialog" timestamp="1634956091862">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="275" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634956091862" />
+    <state x="540" y="275" key="AndroidCreateResourceFileDialog" timestamp="1634956131446">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="275" key="AndroidCreateResourceFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634956131446" />
+    <state x="758" y="266" key="AndroidProcessChooserDialog" timestamp="1634944860688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="266" key="AndroidProcessChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634944860688" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1634963880101">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634963880101" />
+    <state x="267" y="275" key="FileChooserDialogImpl" timestamp="1634843954977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="267" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1634843954977" />
+    <state width="1876" height="171" key="GridCell.Tab.0.bottom" timestamp="1634971546373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546373" />
+    <state width="1876" height="171" key="GridCell.Tab.0.center" timestamp="1634971546372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546372" />
+    <state width="1876" height="171" key="GridCell.Tab.0.left" timestamp="1634971546371">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546371" />
+    <state width="1876" height="171" key="GridCell.Tab.0.right" timestamp="1634971546372">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546372" />
+    <state width="1876" height="171" key="GridCell.Tab.1.bottom" timestamp="1634971546374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546374" />
+    <state width="1876" height="171" key="GridCell.Tab.1.center" timestamp="1634971546374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546374" />
+    <state width="1876" height="171" key="GridCell.Tab.1.left" timestamp="1634971546373">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546373" />
+    <state width="1876" height="171" key="GridCell.Tab.1.right" timestamp="1634971546374">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="171" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634971546374" />
+    <state x="222" y="153" key="SettingsEditor" timestamp="1634880777741">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="222" y="153" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634880777741" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1634861482742">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1634861482742" />
+    <state x="775" y="298" width="535" height="444" key="chooseDestDirectoryDialog" timestamp="1634956924689">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="775" y="298" width="535" height="444" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634956924689" />
+    <state x="783" y="78" width="1137" height="766" key="find.popup" timestamp="1634969160268">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="783" y="78" width="1137" height="766" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1634969160268" />
+    <state x="709" y="342" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog" timestamp="1634956924715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="709" y="342" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1634956924715" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1634955458641">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1634955458641" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserApi.kt</url>
+          <line>30</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserApi.kt</url>
+          <line>17</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/data/api/UserApi.kt</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/domain/UserPersistenceImpl.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/userappchallenge/domain/UserPersistenceImpl.kt</url>
+          <line>14</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/example/userappchallenge/data/database/UserDao_Impl.java</url>
+          <line>162</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.userappchallenge.data.UserServices
 import com.example.userappchallenge.data.database.UserDao
 import com.example.userappchallenge.data.database.UserDatabase
+import com.example.userappchallenge.domain.UserPersistence
 import com.example.userappchallenge.utils.DefaultSchedulerProvider
 import com.example.userappchallenge.utils.SchedulerProvider
 import dagger.Module
@@ -36,7 +37,7 @@ class Module {
     @Provides
     fun getUserDatabase(@ApplicationContext context: Context): UserDatabase {
         return Room.databaseBuilder(
-            context,
+            context.applicationContext,
             UserDatabase::class.java,
             UserDatabase::class.java.name
         )
@@ -44,6 +45,7 @@ class Module {
             .build()
     }
 
+    @Singleton
     @Provides
     fun getUserDao(userDatabase: UserDatabase): UserDao {
         return userDatabase.getUserDao()

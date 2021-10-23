@@ -12,13 +12,14 @@ import javax.inject.Inject
 class UserDetailViewModel @Inject constructor(
     private val fetchUserInfoUseCase: FetchUserInfoUseCase
 ) : ViewModel() {
+
     private val disposable: CompositeDisposable = CompositeDisposable()
     val state = MutableLiveData<UserDetailViewState>()
 
-    fun fetchUser() {
+    fun fetchUserById(userId: String) {
         state.postValue(UserDetailViewState.Loading)
         disposable.add(
-            fetchUserInfoUseCase.invoke()
+            fetchUserInfoUseCase.invoke(id = userId)
                 .subscribeOn(Schedulers.io())
                 .observeOn(Schedulers.io())
                 .subscribe({

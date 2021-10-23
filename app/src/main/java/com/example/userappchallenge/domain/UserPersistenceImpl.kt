@@ -3,13 +3,18 @@ package com.example.userappchallenge.domain
 import com.example.userappchallenge.data.database.UserDao
 import com.example.userappchallenge.entities.User
 import io.reactivex.Completable
+import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
 class UserPersistenceImpl @Inject constructor(
     private val userDao: UserDao
 ) : UserPersistence {
-    override fun getUsers(): Single<List<User>> {
+    override fun getUserById(id: String): Single<User> {
+        return Single.just(userDao.getById(id).toUser())
+    }
+
+    override fun getUsers(): Observable<List<User>> {
         return userDao.getUsers()
             .map { userList ->
                 userList.map {
@@ -20,6 +25,10 @@ class UserPersistenceImpl @Inject constructor(
 
     override fun saveUser(user: User): Completable {
         return userDao.insertUser(userEntity = user.toUserEntity())
+    }
+
+    override fun saveUserList(userList: List<User>): Completable {
+        return userDao.insertUserList(userList = userList.map { it.toUserEntity() })
     }
 
 }

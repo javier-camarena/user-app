@@ -8,11 +8,7 @@ import javax.inject.Inject
 class FetchMultipleUsersUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    operator fun invoke(): Observable<User> {
-        return Observable.range(0, 5)
-            .flatMap {
-                println(it)
-                return@flatMap userRepository.fetchUser().toObservable()
-            }
+    operator fun invoke(): Observable<List<User>> {
+        return userRepository.fetchUserList()
     }
 }
