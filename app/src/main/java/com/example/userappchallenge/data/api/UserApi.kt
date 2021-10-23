@@ -1,4 +1,4 @@
-package com.example.userappchallenge.data.api.datasources
+package com.example.userappchallenge.data.api
 
 import com.example.userappchallenge.data.UserServices
 import com.example.userappchallenge.data.response.UserResponse
@@ -19,6 +19,8 @@ class UserApi @Inject constructor(
         return this.results.firstOrNull()?.let {
             with(it) {
                 User(
+                    id = login.uuid,
+                    nickName = login.username,
                     firstName = name.first,
                     lastName = name.last,
                     nationality = nat,

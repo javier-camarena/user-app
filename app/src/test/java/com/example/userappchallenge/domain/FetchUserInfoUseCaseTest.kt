@@ -2,8 +2,8 @@ package com.example.userappchallenge.domain
 
 import com.example.userappchallenge.Utils.getSingleUserSuccessResponse
 import com.example.userappchallenge.data.UserServices
-import com.example.userappchallenge.data.api.datasources.UserApi
-import com.example.userappchallenge.data.api.datasources.UserRepository
+import com.example.userappchallenge.data.api.UserApi
+import com.example.userappchallenge.data.api.UserRepository
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
 import org.junit.Before

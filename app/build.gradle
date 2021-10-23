@@ -56,6 +56,7 @@ dependencies {
     implementation libraries.squareup.converter
     implementation libraries.squareup.adapter
     implementation libraries.androidx.roomRuntime
+    implementation libraries.androidx.rxjava2
     implementation libraries.androidx.roomKtx
     implementation libraries.dagger.hiltAndroid
     implementation libraries.coil.coil

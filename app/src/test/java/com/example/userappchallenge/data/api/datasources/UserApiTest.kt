@@ -2,6 +2,7 @@ package com.example.userappchallenge.data.api.datasources
 
 import com.example.userappchallenge.Utils
 import com.example.userappchallenge.data.UserServices
+import com.example.userappchallenge.data.api.UserApi
 import com.nhaarman.mockitokotlin2.whenever
 import io.reactivex.Single
 import org.junit.Assert
