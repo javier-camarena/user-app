@@ -24,13 +24,12 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.UserViewHolder>() {
 
     override fun getItemCount(): Int = userList.size
 
-    fun updateUserData(data: List<UserViewData>) {
-        userList.clear()
-        userList.addAll(data)
+    fun updateUserData(data: UserViewData) {
+        userList.add(data)
         notifyDataSetChanged()
     }
 
-    inner class UserViewHolder(val binding: UserHolderBinding) :
+    inner class UserViewHolder(private val binding: UserHolderBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: UserViewData) {
             binding.apply {
